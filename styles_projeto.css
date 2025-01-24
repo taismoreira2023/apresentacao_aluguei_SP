@@ -1,0 +1,490 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header img {
+    height: 40px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: rgb(65, 45, 179);
+}
+
+/* Hero Section */
+.home {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+.home img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.home h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.home p {
+    font-size: 1.1rem;
+    margin: 15px 0 0;
+    max-width: 700px;
+    line-height: 1.5;
+}
+
+/*---------------------------------------------*/
+
+.sobre_dataset {
+    margin: 100px 10% 100px 10%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: left;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-content{
+    margin-right: 50px;
+}
+
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.subtitle {
+    color: rgb(55, 56, 165);
+    font-size: 12px;
+    font-weight: 800;
+    
+}
+
+.content {
+    max-width: 600px; 
+    font-size: 1.1em;
+    line-height: 1.6;
+    padding-right: 30px;
+    text-align: left;
+}
+
+
+.image-container {
+    margin-top: 40px;
+    display: inline-block;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to bottom right, rgb(65, 44, 182), black);
+    border-image-slice: 1;
+    padding: 15px;
+}
+
+.image-container img {
+    max-width: 100%;
+}
+.container-content strong{
+    font-weight: 900;
+    font-size: 35px;
+}
+.container-content p{
+    font-size: 20px;
+}
+
+/*------------------------------------------------------*/
+
+.image-container {
+    margin-top: 40px;
+    display: inline-block;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to bottom right, rgb(72, 54, 176), black);
+    border-image-slice: 1;
+    padding: 15px;
+}
+
+.section {
+    margin:100px 10% 100px 10%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.section-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-right: 100px;
+}
+.faq{
+    width: 50%;
+}
+.banner2 {
+    padding: 0 10% 0 10%;
+}
+
+.banner2 img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.faq-header span {
+    color: rgb(64, 43, 187);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.faq-header h2 {
+    font-size: 2rem;
+    margin-top: 5px;
+}
+
+.accordion {
+    background-color: rgb(52, 54, 159);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.accordion:hover {
+    background-color: rgb(85, 87, 201);
+}
+
+.accordion:after {
+    content: '\002B'; /* Plus symbol */
+    font-size: 1.2rem;
+    float: right;
+}
+
+.accordion.active:after {
+    content: '\2212'; /* Minus symbol */
+}
+
+.panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    background-color: white;
+    color: #333;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.panel-content {
+    padding: 15px;
+}
+
+/*------------------------------------------------------------------*/
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('banner3.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: 400px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 21, 21, 0.584);
+}
+
+.content {
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background-color: rgb(52, 54, 159);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(38, 0, 255);
+}
+
+
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer-container {
+    margin: 0 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+.footer-container img{
+    width: 150px;
+}
+
+.footer-logo {
+    width: 50px;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 10px;
+
+}
+
+.footer-icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    transition: color 0.3s;
+}
+.footer-icon img{
+    width: 25px;
+}
+
+.footer-icon:hover {
+    color: rgb(38, 0, 255);
+}
+
+
+@media (max-width: 768px) {
+/* Ajustes para o cabeçalho */
+header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+header img {
+    height: 30px;
+    margin-bottom: 10px;
+}*/
+
+nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+nav a {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.banner2{
+    display: none;
+}
+/* Ajustes para a seção Hero */
+.hero {
+    height: auto;
+    text-align: center;
+}
+
+.hero img {
+    height: auto;
+    max-width: 100%;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+/* Ajustes para a seção "Sobre Dataset" */
+.container {
+    flex-direction: column;
+    text-align: center;
+}
+.subtitle{
+    font-size: 15px;
+}
+
+.container strong{
+    font-size: 25px;
+}
+
+.container p{
+    font-size: 20px;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.container-content {
+    padding: 0;
+    text-align: left;
+    margin-right: 0;
+}
+
+.content {
+    padding: 0;
+    text-align: center;
+}
+.content h1{
+    font-size: 25px;
+    margin-top: 10px;
+}
+.content p{
+    font-size: 16px;
+}
+.content button{
+    margin-bottom: 10px;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+/* Ajustes para a seção FAQ */
+.section {
+    flex-direction: column;
+}
+
+.faq {
+    width: 100%;
+}
+
+.section-title {
+    font-size: 23px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Ajustes para a hero final */
+.hero-content {
+    text-align: center;
+    padding-top: 20px;
+    width: 90%;
+}
+
+.hero-content h1 {
+    font-size: 20px;
+}
+
+.hero-content p {
+    font-size: 1px;
+}
+
+.btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+}
+
+/* Ajustes para o rodapé */
+.footer-container {
+    text-align: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    display: none;
+    width: 40px;
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+.footer-icons {
+    justify-content: center;
+}
+
+}

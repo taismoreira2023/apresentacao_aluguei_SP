@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Análise de Dados de Aluguéis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        code {
+            background: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        pre {
+            background: #e8e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .highlight {
+            background: #ffeb3b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Projeto de Análise de Dados de Aluguéis de Imóveis em São Paulo</h1>
+        
+        <p>Este projeto realiza uma análise exploratória de dados sobre imóveis alugados na cidade de São Paulo. O conjunto de dados contém informações sobre imóveis disponíveis para locação, incluindo detalhes como endereço, tipo, área, número de quartos, garagem, aluguel e custo total.</p>
+
+        <h2>Objetivo</h2>
+        <p>O objetivo principal deste projeto é analisar as variáveis do conjunto de dados e obter insights sobre o mercado de aluguel de imóveis em São Paulo, explorando tendências, correlações e comparações entre diferentes tipos de imóveis, bairros e características financeiras.</p>
+
+        <h2>Dados</h2>
+        <p>O conjunto de dados contém as seguintes colunas:</p>
+        <ul>
+            <li><strong>address:</strong> Localização completa da propriedade.</li>
+            <li><strong>district:</strong> Região onde o imóvel está situado.</li>
+            <li><strong>area:</strong> Tamanho do imóvel em metros quadrados (m²).</li>
+            <li><strong>bedrooms:</strong> Número de quartos disponíveis.</li>
+            <li><strong>garage:</strong> Total de vagas na garagem.</li>
+            <li><strong>type:</strong> Tipo de propriedade (apartamento, casa, etc.).</li>
+            <li><strong>rent:</strong> Valor do aluguel mensal.</li>
+            <li><strong>total:</strong> Soma do aluguel, impostos e outras taxas.</li>
+        </ul>
+
+        <pre>
+    import pandas as pd
+    df = pd.read_csv('data.csv', sep=',')
+        </pre>
+
+        <h2>Tratamento e Limpeza de Dados</h2>
+        <p>Durante o processo de análise, foram realizados os seguintes tratamentos de dados:</p>
+        <ul>
+            <li>Remoção de registros com área menor que 5 m².</li>
+            <li>Remoção de registros com 0 quartos.</li>
+        </ul>
+        <pre>
+    df.isnull().sum()  # Verifica os valores nulos
+    df.describe()  # Estatísticas descritivas
+        </pre>
+
+        <h2>Análise Exploratória</h2>
+        <h3>Estatísticas Descritivas</h3>
+        <ul>
+            <li>Área média, mínima e máxima dos imóveis.</li>
+            <li>Valor médio de aluguel por tipo de imóvel.</li>
+            <li>Custo total médio por bairro.</li>
+        </ul>
+
+        <h3>Correlação e Relações</h3>
+        <pre>
+correlacao = df[['area','rent']].corr()
+        </pre>
+
+        <h2>Gráficos e Visualizações</h2>
+        <p>Diversos gráficos foram gerados, como:</p>
+        <ul>
+            <li>Distribuição do número de quartos.</li>
+            <li>Comparação do aluguel médio por tipo de imóvel.</li>
+            <li>Top 15 bairros com maior custo total médio.</li>
+        </ul>
+        <pre>
+plt.bar(categoria, valores, color='orange')
+plt.title("Comparação do Aluguel Médio por Tipo de Imóvel")
+        </pre>
+
+        <h2>Insights Obtidos</h2>
+        <ul>
+            <li>Imóveis maiores tendem a ter aluguéis mais altos.</li>
+            <li>Bairros como Alphaville são os mais caros, enquanto Jardim Jaçanã é mais acessível.</li>
+            <li>Imóveis com garagem têm custos totais mais elevados.</li>
+        </ul>
+
+        <h2>Tecnologias Utilizadas</h2>
+        <ul>
+            <li><strong>Pandas:</strong> Manipulação e análise de dados.</li>
+            <li><strong>Matplotlib:</strong> Visualização de dados.</li>
+            <li><strong>Seaborn:</strong> Gráficos estatísticos.</li>
+        </ul>
+
+        <h2>Como Rodar o Projeto</h2>
+        <ol>
+            <li>Clone o repositório.</li>
+            <li>Instale as dependências:</li>
+            <pre>
+pip install pandas matplotlib seaborn
+            </pre>
+            <li>Execute o script para carregar os dados e realizar a análise:</li>
+            <pre>
+python analise_imoveis.ipynb
+            </pre>
+        </ol>
+    </div>
+</body>
+</html>
